@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".IRRHome"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="IRR"-->
+    <!--android:gravity="center"/>-->
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/IRRView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="IRR"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"/>
+
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Months"-->
+        <!--android:gravity="center"/>-->
+        <EditText
+            android:id="@+id/monthsPeriodText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Months Period"
+            android:gravity="center"
+            android:inputType="number"
+            android:nextFocusDown="@+id/priceText"
+            android:imeOptions="flagNoExtractUi"
+            />
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Interest Rate"-->
+        <!--android:gravity="center"/>-->
+        <EditText
+            android:id="@+id/interestRateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Interest Rate (%)"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:nextFocusDown="@+id/processingFeesText"
+            android:imeOptions="flagNoExtractUi"/>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/installmentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Installment"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"/>
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Price"-->
+        <!--android:gravity="center"/>-->
+        <EditText
+            android:id="@+id/priceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@id/interestRateText"
+            android:imeOptions="flagNoExtractUi"/>
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Processing Fees"-->
+        <!--android:gravity="center"/>-->
+        <EditText
+            android:id="@+id/processingFeesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Processing Fees"
+            android:gravity="center"
+            android:inputType="number"
+            android:nextFocusDown="@+id/advanceInstallmentsText"
+            android:imeOptions="flagNoExtractUi"/>
+    </TableLayout>
+
+</LinearLayout>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Advance Installments"-->
+    <!--android:gravity="center"/>-->
+    <EditText
+        android:id="@+id/advanceInstallmentsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Advance Installments"
+        android:gravity="center"
+        android:inputType="number"
+        android:imeOptions="flagNoExtractUi"/>
+    <Button
+        android:id="@+id/calculateBut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Calculate"
+        android:textStyle="bold"
+        android:imeOptions="flagNoExtractUi"/>
+
+</LinearLayout>
+    </ScrollView>
